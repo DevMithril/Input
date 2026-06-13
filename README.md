@@ -16,7 +16,7 @@ Actuellement, cette librairie ne gère que les saisies du clavier et de la souri
 Vous pouvez modifier les noms des champs de la structure dans `input.h` à votre
 convenance.
 Pour que plus d'inputs soient disponibles, modifiez la constante `KEY_COUNT`
-dans `types.h` puis recompilez la librairie (n'oubliez pas d'ajouter les champs
+dans `src/types.h` puis recompilez la librairie (n'oubliez pas d'ajouter les champs
 d'input supplémentaires dans `input.h`).
 
 #### Compilation :
