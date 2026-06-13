@@ -57,7 +57,7 @@ void bind_keys(App *app) {
 
     switch (app->key_to_bind) {
     case 0 :
-        if (app->input._to_change) {
+        if (is_binding_key(&app->input)) {
             SDL_RenderDebugTextFormat(app->renderer, 100, 100, "PRESS UP");
         } else {
             app->key_to_bind++;
@@ -65,7 +65,7 @@ void bind_keys(App *app) {
         }
         break;
     case 1 :
-        if (app->input._to_change) {
+        if (is_binding_key(&app->input)) {
             SDL_RenderDebugTextFormat(app->renderer, 100, 100, "PRESS DOWN");
         } else {
             app->key_to_bind++;
@@ -73,7 +73,7 @@ void bind_keys(App *app) {
         }
         break;
     case 2 :
-        if (app->input._to_change) {
+        if (is_binding_key(&app->input)) {
             SDL_RenderDebugTextFormat(app->renderer, 100, 100, "PRESS RIGHT");
         } else {
             app->key_to_bind++;
@@ -81,7 +81,7 @@ void bind_keys(App *app) {
         }
         break;
     case 3 :
-        if (app->input._to_change) {
+        if (is_binding_key(&app->input)) {
             SDL_RenderDebugTextFormat(app->renderer, 100, 100, "PRESS LEFT");
         } else {
             app->binding_keys = false;
