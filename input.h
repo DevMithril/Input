@@ -9,7 +9,7 @@
 */
 
 typedef struct Key {
-    SDL_Scancode key;
+    unsigned int key;
     int _delay;
     int _default_delay;
 } Key;
@@ -73,5 +73,12 @@ void set_key_delay(Key *key, int delay, bool is_cancelable);
  * \note `scancode` ou `button` est présumé égal à 0, l'autre étant l'input
  */
 bool set_key(Key *key, SDL_Scancode scancode, SDL_MouseButtonFlags button);
+
+/**
+ * Indique que l'on modifie actuellement l'input d'une Key
+ * \param input structure concernée
+ * \return `true` si une Key est en cours de modification, `false` sinon
+ */
+bool is_binding_key(Input *input);
 
 #endif
