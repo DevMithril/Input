@@ -2,3 +2,4 @@ dep
 bin
 *.o
 *.d
+demo/demo_input
